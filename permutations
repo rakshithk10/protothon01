@@ -1,0 +1,7 @@
+import nltk
+from itertools import permutations
+perm=[''.join(i) for i in permutations('protosem')]
+print(perm)
+for i in range (len(perm)):
+    if perm[i] in words.words():
+        print(perm[i]) 
