@@ -1,0 +1,9 @@
+print("Enter the number of values")
+a=int(input())
+for i in range (a):
+    for j in range(a-i):
+        print(" ",end='')
+    b=11**i
+    c=str(b)
+    d=list(c)
+    print(*d)
