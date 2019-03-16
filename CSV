@@ -1,0 +1,19 @@
+import pandas as pd
+import os
+import random
+num=1
+def csv(file):
+    title=['#','num1','num2','num3','num4','num5']
+    a=pd.DataFrame([],columns=title)
+    a.to_csv(file)
+    r=1
+    while os.stat(file).st_size<2000:
+        c=[random.randint(1,50) for i in range(5)]
+        c.insert(0,r)
+        r=r+1
+        c=pd.DataFrame([c])
+        c.to_csv(file, mode='a',header=False,index=False)
+while num<=3:
+    file='file'+str(num)+'.csv'
+    csv(file)
+    num=num+1
