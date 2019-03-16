@@ -1,0 +1,11 @@
+import math
+print("Enter the numbers with ,")
+a=str(input())
+ls=a.split(",")
+for i in range (len(ls)):
+    ls[i]=int(ls[i])
+for i in range (len(ls)):
+    ls[i]=ls[i]*ls[i]
+a=sum(ls)/len(ls)
+b=math.sqrt(a)
+print(b)
